@@ -1,5 +1,75 @@
-#drop_zone {
-    border: 5px solid blue;
-    width:  200px;
-    height: 100px;
+#send-files-page {
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#send-files-page .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#send-files-page h1 {
+    color: var(--dark-color);
+    padding-top: 25px;
+}
+
+#send-files-page #upload-btn {
+    display: block;
+    width: fit-content;
+    margin-top: 25px;
+}
+
+  #send-files-page form label#files-label {
+      padding: 15px 10px;
+      color: var(--dark-color);
+      width: 400px;
+      height: 200px;
+      display: inline-block;
+      border: 2px dashed #fff;
+      margin-top: 15px;
+  }
+
+  input#files {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+
+  #files-label {
+      position: relative;
+  }
+
+  .files-list {
+      margin-top: 25px;
+  }
+
+  .files-list ul {
+      list-style: none;
+      max-width: 400px;
+  }
+
+  .files-list ul li {
+      border-top: 1px solid #fff;
+      padding: 15px 5px;
+      font-size: 18px;
+      color: var(--dark-color);
+  }
+
+  .files-list ul li:last-of-type {
+      border-bottom: 1px solid #fff;
+  }
+
+  #send-files-page #next-page-btn {
+      width: 100%;
+      text-align: center;
+      margin: 25px auto;
   }
