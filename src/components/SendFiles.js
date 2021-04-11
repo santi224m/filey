@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import generator from 'generate-password';
 
 const SendFiles = ({ setCode }) => {
     const [files, setFiles] = useState([]);
@@ -19,16 +20,15 @@ const SendFiles = ({ setCode }) => {
     }
 
     const handleNextBtn = () => {
-        let newCode = Math.floor(Math.random() * 99999)
-        while (newCode < 10000) {
-            newCode = Math.floor(Math.random() * 99999)
-        }
-        console.log(newCode);
+        const newCode = generator.generate({
+            length: 6,
+            numbers: true
+        })
         setCode(newCode);
     }
 
     const renderNextBtn = () => {
-        return <Link to="/upload-files-success" className="btn" id="next-page-btn" onClick={handleNextBtn}>Upload</Link>
+        return <Link to="/upload-files-success" className="btn" id="next-page-btn" onClick={handleNextBtn}>Send</Link>
     }
 
     return (
