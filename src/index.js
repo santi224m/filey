@@ -7,5 +7,6 @@ import './styles/utilities.css';
 import './styles/components/navbar.css';
 import './styles/components/home.css'
 import './styles/components/sendFiles.css'
+import './styles/components/sendFilesSuccess.css'
 
 ReactDOM.render(<App />, document.getElementById('root'));

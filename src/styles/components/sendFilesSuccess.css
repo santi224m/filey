@@ -1,0 +1,19 @@
+#send-file-sucess-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    text-align: center;
+    color: var(--dark-color);
+}
+
+#send-file-sucess-page h2 {
+    font-size: 4.5vw;
+}
+
+#send-file-sucess-page h1 {
+    color: #fff;
+    font-size: 5.5vw;
+    padding: 24px 0 50px;
+}
