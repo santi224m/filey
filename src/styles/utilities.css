@@ -1,0 +1,18 @@
+.container {
+    max-width: 1200px;
+    padding: 0 50px;
+    margin: 0 auto;
+}
+
+.btn {
+    padding: 10px 25px;
+    background-color: #fff;
+    color: var(--dark-color);
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.btn:hover {
+    cursor: pointer;
+    background-color: var(--medium-color);
+}

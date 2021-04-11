@@ -1,0 +1,33 @@
+#home-page {
+    height: 90vh;
+    background: var(--primary-color);
+}
+
+#home-page .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    color: var(--dark-color);
+}
+
+#home-page h1 {
+    font-size: 65px;
+    color: #fff;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+#home-page p {
+    text-align: center;
+    padding: 0 50px;
+}
+
+#home-page .wrap-buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 300px;
+    margin-top: 25px;
+}

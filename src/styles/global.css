@@ -1,0 +1,16 @@
+:root {
+    --primary-color: #89e6f5;
+    --medium-color: #eef6f9;
+    --dark-color: #17191a;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background-color: var(--primary-color);
+}
