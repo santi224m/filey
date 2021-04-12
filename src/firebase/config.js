@@ -1,5 +1,5 @@
 import keys from '../config/keys';
-import firebase from 'firebase/app';
+import firebase from 'firebase';
 
 var firebaseConfig = {
     apiKey: keys.apiKey,
@@ -10,6 +10,5 @@ var firebaseConfig = {
     appId: keys.appId,
 };
 
-firebase.initializeApp(firebaseConfig);
-const storage = firebase.storage();
-// export const storageRef = storage.ref();
+const app = firebase.initializeApp(firebaseConfig);
+export const storage = firebase.storage();

@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import generator from 'generate-password';
-import { storageRef } from '../firebase/config';
+import { storage } from '../firebase/config';
 
 const SendFiles = ({ setCode }) => {
     const [files, setFiles] = useState([]);
@@ -10,48 +10,67 @@ const SendFiles = ({ setCode }) => {
         let selected = e.target.files;
         // console.log(selected);
         setFiles(Object.values(selected));
-    }
+    };
 
     const renderFilesList = () => {
         return files.map(file => {
-            return (
-                <li key={file.name}>{file.name}</li>
-            );
-        })
-    }
+            return <li key={file.name}>{file.name}</li>;
+        });
+    };
 
     const handleNextBtn = () => {
         const newCode = generator.generate({
             length: 6,
-            numbers: true
-        })
+            numbers: true,
+        });
         setCode(newCode);
-    }
+        const storageRef = storage.ref();
+        const filesRef = storageRef.child('userFiles/' + newCode);
+        files.forEach(file => {
+            const userRef = filesRef.child(file.name);
+            userRef.put(file);
+        });
+    };
 
     const renderNextBtn = () => {
-        return <Link to="/upload-files-success" className="btn" id="next-page-btn" onClick={handleNextBtn}>Send</Link>
-    }
+        return (
+            <Link
+                to='/upload-files-success'
+                className='btn'
+                id='next-page-btn'
+                onClick={handleNextBtn}
+            >
+                Send
+            </Link>
+        );
+    };
 
     return (
-        <div id="send-files-page">
-            <div className="container">
+        <div id='send-files-page'>
+            <div className='container'>
                 <h1>Upload your files</h1>
                 <form>
-                    <label htmlFor="files" id="upload-btn" className="btn">Add Files</label>
-                    <label htmlFor="files" id="files-label">
+                    <label htmlFor='files' id='upload-btn' className='btn'>
+                        Add Files
+                    </label>
+                    <label htmlFor='files' id='files-label'>
                         Drag and drop files
-                        <input type="file" name="files" id="files" multiple="multiple" onChange={changeHandler}/>
+                        <input
+                            type='file'
+                            name='files'
+                            id='files'
+                            multiple='multiple'
+                            onChange={changeHandler}
+                        />
                     </label>
                 </form>
-                <div className="files-list">
-                    <ul>
-                        {renderFilesList()}
-                    </ul>
+                <div className='files-list'>
+                    <ul>{renderFilesList()}</ul>
                 </div>
                 {files.length !== 0 && renderNextBtn()}
             </div>
         </div>
     );
-}
+};
 
 export default SendFiles;
