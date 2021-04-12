@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import generator from 'generate-password';
+import { storageRef } from '../firebase/config';
 
 const SendFiles = ({ setCode }) => {
     const [files, setFiles] = useState([]);

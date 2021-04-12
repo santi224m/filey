@@ -8,7 +8,7 @@ import RecieveFiles from './RecieveFiles';
 
 const App = () => {
     const [senderCode, setSenderCode] = useState(null);
-    const [recieverCode, setRecieverCode] = useState(null);
+    const [recieverCode, setRecieverCode] = useState('');
     const [recieverFiles, setRecieverFiles] = useState(null);
 
     return (
