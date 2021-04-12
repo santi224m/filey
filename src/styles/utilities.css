@@ -10,6 +10,7 @@
     color: var(--dark-color);
     border-radius: 5px;
     text-decoration: none;
+    border: none;
 }
 
 .btn:hover {
