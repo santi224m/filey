@@ -13,4 +13,5 @@
 body {
     min-height: 100vh;
     background-color: var(--primary-color);
+    color: var(--dark-color);
 }

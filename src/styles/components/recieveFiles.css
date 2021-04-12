@@ -1,0 +1,35 @@
+#recieve-files-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+#recieve-files-page h1 {
+    font-size: 5vw;
+    padding-top: 80px;
+}
+
+#recieve-files-page form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 80px;
+}
+
+#recieve-files-page form input#code-input {
+    padding: 10px 10px;
+    font-size: 22px;
+    text-align: center;
+}
+
+#recieve-files-page form input:focus {
+    outline: none;
+}
+
+#recieve-files-page form button {
+    margin-top: 15px;
+}
+
+#recieve-files-page form button:focus {
+    outline: none;
+}
