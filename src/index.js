@@ -10,5 +10,6 @@ import './styles/components/sendFiles.css';
 import './styles/components/sendFilesSuccess.css';
 import './styles/components/recieveFiles.css';
 import './styles/components/recieveFilesSuccess.css';
+import './styles/components/about.css';
 
 ReactDOM.render(<App />, document.getElementById('root'));

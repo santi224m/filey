@@ -7,6 +7,7 @@ import SendFiles from './SendFiles';
 import SendFilesSuccess from './SendFilesSuccess';
 import RecieveFiles from './RecieveFiles';
 import RecieveFilesSuccess from './RecieverFilesSuccess';
+import About from './About';
 
 const App = () => {
     const [senderCode, setSenderCode] = useState(null);
@@ -29,10 +30,9 @@ const App = () => {
                     />
                 </Route>
                 <Route path='/recieve-files-success'>
-                    <RecieveFilesSuccess
-                        recieverCode={recieverCode}
-                    />
+                    <RecieveFilesSuccess recieverCode={recieverCode} />
                 </Route>
+                <Route path='/about' component={About} />
                 <Route path='/' exact component={Home} />
             </Switch>
         </Router>

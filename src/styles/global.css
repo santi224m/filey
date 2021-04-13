@@ -1,7 +1,7 @@
 :root {
-    --primary-color: #89e6f5;
-    --medium-color: #eef6f9;
-    --dark-color: #17191a;
+    --primary-color: #1f2c73;
+    --secondary-color: #fc5185;
+    --background-color: #ecf5ff;
 }
 
 * {
@@ -12,6 +12,7 @@
 
 body {
     min-height: 100vh;
-    background-color: var(--primary-color);
-    color: var(--dark-color);
+    background-color: var(--background-color);
+    color: var(--primary-color);
+    font-family: 'Poppins', sans-serif;
 }

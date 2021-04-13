@@ -36,7 +36,7 @@ const SendFiles = ({ setCode }) => {
         return (
             <Link
                 to='/upload-files-success'
-                className='btn'
+                className='btn btn-secondary'
                 id='next-page-btn'
                 onClick={handleNextBtn}
             >
@@ -48,13 +48,14 @@ const SendFiles = ({ setCode }) => {
     return (
         <div id='send-files-page'>
             <div className='container'>
-                <h1>Upload your files</h1>
+                <h1 className='heading'>Upload your files</h1>
                 <form>
                     <label htmlFor='files' id='upload-btn' className='btn'>
-                        Add Files
+                        Click to Upload Files
                     </label>
+                    <p>Or</p>
                     <label htmlFor='files' id='files-label'>
-                        Drag and drop files
+                        Drag and drop files here
                         <input
                             type='file'
                             name='files'
@@ -65,9 +66,11 @@ const SendFiles = ({ setCode }) => {
                     </label>
                 </form>
                 <div className='files-list'>
-                    <ul>{renderFilesList()}</ul>
+                    <ul>
+                        {renderFilesList()}
+                        {files.length !== 0 && renderNextBtn()}
+                    </ul>
                 </div>
-                {files.length !== 0 && renderNextBtn()}
             </div>
         </div>
     );

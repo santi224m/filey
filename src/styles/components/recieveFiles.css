@@ -1,35 +1,45 @@
 #recieve-files-page {
+    min-height: 88vh;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: center;
 }
 
-#recieve-files-page h1 {
-    font-size: 5vw;
-    padding-top: 80px;
+#recieve-files-page .heading {
+    text-align: center;
 }
 
 #recieve-files-page form {
     display: flex;
     flex-direction: column;
-    margin-top: 80px;
 }
 
 #recieve-files-page form input#code-input {
-    padding: 10px 10px;
-    font-size: 22px;
+    padding: 10px;
+    font-size: 15px;
     text-align: center;
+    width: 415px;
+    max-width: 100%;
+    border: 1px solid rgba(31, 44, 115, 0.2);
+    background: transparent;
+    color: var(--primary-color);
+    margin-bottom: 60px;
+}
+
+/*Change text in autofill textbox*/
+#recieve-files-page form input#code-input:-webkit-autofill {
+    -webkit-text-fill-color: var(--primary-color) !important;
 }
 
 #recieve-files-page form input:focus {
     outline: none;
 }
 
-#recieve-files-page form button {
-    margin-top: 15px;
-}
-
 #recieve-files-page form button:focus {
     outline: none;
+}
+
+#recieve-files-page .btn {
+    margin: 0 auto;
 }

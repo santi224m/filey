@@ -3,17 +3,14 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 90vh;
+    min-height: 88vh;
     text-align: center;
     color: var(--dark-color);
 }
 
-#send-file-sucess-page h2 {
-    font-size: 4.5vw;
-}
-
-#send-file-sucess-page h1 {
-    color: #fff;
-    font-size: 5.5vw;
-    padding: 24px 0 50px;
+h1#code {
+    font-size: 50px;
+    font-weight: 400;
+    color: var(--secondary-color);
+    margin-bottom: 60px;
 }
