@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { storage } from '../firebase/config';
+import CloseSession from './CloseSession';
 
 const RecieveFilesSuccess = ({ recieverCode }) => {
     const [fileNames, setFileNames] = useState([]);
@@ -26,19 +27,20 @@ const RecieveFilesSuccess = ({ recieverCode }) => {
     const renderFilesList = () => {
         return fileNames.map(file => {
             return (
-                <div key={file.name} className="field">
+                <div key={file.name} className='field'>
                     <p>{file.name}</p>
                     <a href={URL.createObjectURL(file.blob)} download={file.name} className="btn">Download File</a>
                 </div>
             );
-        })
-    }
+        });
+    };
 
     return (
         <div id='reciever-file-success'>
             <div className='container'>
                 <h2>Your files:</h2>
                 {renderFilesList()}
+                <CloseSession code={recieverCode} />
             </div>
         </div>
     );
