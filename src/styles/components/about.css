@@ -45,3 +45,14 @@
 #about-page img:last-of-type {
     margin-bottom: 80px;
 }
+
+@media only screen and (max-width: 768px) {
+    #about-page #header-section {
+        min-height: 360px;
+    }
+
+    #about-page .heading {
+        font-size: 23px;
+        padding: 0 40px;
+    }
+}

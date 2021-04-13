@@ -29,3 +29,9 @@
 #navbar .navbar-links a:hover {
     color: var(--secondary-color);
 }
+
+@media only screen and (max-width: 768px) {
+    #navbar .navbar-links {
+        /* display: none; */
+    }
+}

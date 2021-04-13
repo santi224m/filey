@@ -21,3 +21,17 @@
     font-size: 18px;
     margin-bottom: 14px;
 }
+
+@media only screen and (max-width: 768px) {
+    #reciever-file-success .field {
+        display: block;
+    }
+
+    #reciever-file-success .field p {
+        font-size: 15px;
+    }
+
+    #reciever-file-success .field .btn.btn-secondary {
+        width: 100%;
+    }
+}

@@ -1,6 +1,6 @@
 #home-page .container {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
     min-height: 88vh;
 }
@@ -21,4 +21,33 @@
 
 #home-page .wrap-buttons a.btn {
     margin-right: 20px;
+}
+
+@media only screen and (max-width: 768px) {
+    #home-page {
+        padding: 80px 0;
+    }
+
+    #home-page .container {
+        flex-direction: column;
+        min-height: inherit;
+    }
+
+    #home-page p {
+        font-size: 14px;
+    }
+
+    #home-page .home-img img {
+        width: 248px;
+        max-width: 100%;
+    }
+
+    #home-page .home-content {
+        padding-right: 0;
+        margin-bottom: 40px;
+    }
+
+    #home-page .wrap-buttons {
+        margin-top: 40px;
+    }
 }

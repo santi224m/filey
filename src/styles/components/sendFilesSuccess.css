@@ -14,3 +14,13 @@ h1#code {
     color: var(--secondary-color);
     margin-bottom: 60px;
 }
+
+@media only screen and (max-width: 768px) {
+    #send-file-sucess-page .heading {
+        text-align: center;
+    }
+
+    h1#code {
+        font-size: 30px;
+    }
+}
