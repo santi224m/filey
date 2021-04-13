@@ -5,27 +5,27 @@ import history from '../history';
 const RecieveFiles = ({
     recieverCode,
     setRecieverCode,
-    setRecieverFiles,
-    setDownloadURLs,
 }) => {
     const handleSubmit = e => {
-        const recieverFiles = [];
-        const urls = [];
-        e.preventDefault();
-        const storageRef = storage.ref().child('userFiles/' + recieverCode);
-        storageRef.listAll().then(dir =>
-            dir.items.forEach(item => {
-                recieverFiles.push(item.name);
-                const itemRef = storage.ref().child(item.fullPath);
-                itemRef.getDownloadURL().then(url => {
-                    // console.log(url);
-                    urls.push(url);
-                });
-            })
-        );
+        // const recieverFiles = [];
+        // const urls = [];
+        // e.preventDefault();
+        // const storageRef = storage.ref().child('userFiles/' + recieverCode);
+        // storageRef.listAll().then(dir =>
+        //     dir.items.forEach(item => {
+        //         recieverFiles.push(item.name);
+        //         const itemRef = storage.ref().child(item.fullPath);
+        //         itemRef.getDownloadURL().then(url => {
+        //             // console.log(url);
+        //             urls.push(url);
+        //         });
+        //     })
+        // );
 
-        setRecieverFiles(recieverFiles);
-        setDownloadURLs(urls);
+        // setRecieverFiles(recieverFiles);
+        // setDownloadURLs(urls);
+
+        e.preventDefault();
 
         history.push('recieve-files-success');
     };
