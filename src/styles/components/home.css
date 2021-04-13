@@ -1,33 +1,53 @@
-#home-page {
-    height: 90vh;
-    background: var(--primary-color);
-}
-
 #home-page .container {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
-    height: 100%;
-    color: var(--dark-color);
-}
-
-#home-page h1 {
-    font-size: 65px;
-    color: #fff;
-    margin-bottom: 30px;
-    text-align: center;
+    min-height: 88vh;
 }
 
 #home-page p {
-    text-align: center;
-    padding: 0 50px;
+    font-size: 18px;
+    text-align: left;
+}
+
+#home-page .home-content {
+    padding-right: 60px;
 }
 
 #home-page .wrap-buttons {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 300px;
-    margin-top: 25px;
+    display: block;
+    margin-top: 60px;
+}
+
+#home-page .wrap-buttons a.btn {
+    margin-right: 20px;
+}
+
+@media only screen and (max-width: 768px) {
+    #home-page {
+        padding: 80px 0;
+    }
+
+    #home-page .container {
+        flex-direction: column;
+        min-height: inherit;
+    }
+
+    #home-page p {
+        font-size: 14px;
+    }
+
+    #home-page .home-img img {
+        width: 248px;
+        max-width: 100%;
+    }
+
+    #home-page .home-content {
+        padding-right: 0;
+        margin-bottom: 40px;
+    }
+
+    #home-page .wrap-buttons {
+        margin-top: 40px;
+    }
 }

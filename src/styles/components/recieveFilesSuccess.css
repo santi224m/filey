@@ -2,15 +2,36 @@
     margin-top: 80px;
 }
 
-#reciever-file-success h2 {
-    font-size: 42px;
+#reciever-file-success .container {
+    max-width: 700px;
 }
 
 #reciever-file-success .field {
-    padding: 15px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 24px 0;
+}
+
+#reciever-file-success .field:last-of-type {
+    margin-bottom: 60px;
 }
 
 #reciever-file-success .field p {
     font-size: 18px;
     margin-bottom: 14px;
+}
+
+@media only screen and (max-width: 768px) {
+    #reciever-file-success .field {
+        display: block;
+    }
+
+    #reciever-file-success .field p {
+        font-size: 15px;
+    }
+
+    #reciever-file-success .field .btn.btn-secondary {
+        width: 100%;
+    }
 }

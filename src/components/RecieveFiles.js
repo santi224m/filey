@@ -2,38 +2,16 @@ import { useState } from 'react';
 import { storage } from '../firebase/config';
 import history from '../history';
 
-const RecieveFiles = ({
-    recieverCode,
-    setRecieverCode,
-}) => {
+const RecieveFiles = ({ recieverCode, setRecieverCode }) => {
     const handleSubmit = e => {
-        // const recieverFiles = [];
-        // const urls = [];
-        // e.preventDefault();
-        // const storageRef = storage.ref().child('userFiles/' + recieverCode);
-        // storageRef.listAll().then(dir =>
-        //     dir.items.forEach(item => {
-        //         recieverFiles.push(item.name);
-        //         const itemRef = storage.ref().child(item.fullPath);
-        //         itemRef.getDownloadURL().then(url => {
-        //             // console.log(url);
-        //             urls.push(url);
-        //         });
-        //     })
-        // );
-
-        // setRecieverFiles(recieverFiles);
-        // setDownloadURLs(urls);
-
         e.preventDefault();
-
         history.push('recieve-files-success');
     };
 
     return (
         <div id='recieve-files-page'>
             <div className='container'>
-                <h1>Enter your code</h1>
+                <h1 className='heading'>Enter your code</h1>
                 <form onSubmit={handleSubmit}>
                     <input
                         type='text'
@@ -42,8 +20,8 @@ const RecieveFiles = ({
                         value={recieverCode}
                         onChange={e => setRecieverCode(e.target.value)}
                     />
-                    <button type='submit' className='btn'>
-                        Enter
+                    <button type='submit' className='btn btn-long'>
+                        Continue
                     </button>
                 </form>
             </div>

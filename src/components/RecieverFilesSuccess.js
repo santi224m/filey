@@ -15,7 +15,10 @@ const RecieveFilesSuccess = ({ recieverCode }) => {
                     xhr.responseType = 'blob';
                     xhr.onload = () => {
                         var blob = xhr.response;
-                        setFileNames(arr => [ ...arr, { name: item.name, url: url, blob: blob }]);
+                        setFileNames(arr => [
+                            ...arr,
+                            { name: item.name, url: url, blob: blob },
+                        ]);
                     };
                     xhr.open('GET', url);
                     xhr.send();
@@ -29,7 +32,13 @@ const RecieveFilesSuccess = ({ recieverCode }) => {
             return (
                 <div key={file.name} className='field'>
                     <p>{file.name}</p>
-                    <a href={URL.createObjectURL(file.blob)} download={file.name} className="btn">Download File</a>
+                    <a
+                        href={URL.createObjectURL(file.blob)}
+                        download={file.name}
+                        className='btn btn-secondary'
+                    >
+                        Download
+                    </a>
                 </div>
             );
         });
@@ -38,7 +47,7 @@ const RecieveFilesSuccess = ({ recieverCode }) => {
     return (
         <div id='reciever-file-success'>
             <div className='container'>
-                <h2>Your files:</h2>
+                <h2 className='heading'>Your files</h2>
                 {renderFilesList()}
                 <CloseSession code={recieverCode} />
             </div>

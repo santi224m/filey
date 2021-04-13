@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import { storage } from '../firebase/config';
 import CloseSession from './CloseSession';
 
-const SendFilesSuccess = ({ code, files }) => {
+const SendFilesSuccess = ({ code }) => {
     useEffect(() => {
         return () => {
             const storageRef = storage.ref().child('userFiles/' + code);
@@ -18,8 +18,10 @@ const SendFilesSuccess = ({ code, files }) => {
     return (
         <div id='send-file-sucess-page'>
             <div className='container'>
-                <h2>Enter the following code on the other device</h2>
-                <h1>{code}</h1>
+                <h2 className='heading'>
+                    Enter the following code on the other device
+                </h2>
+                <h1 id='code'>{code}</h1>
                 <CloseSession code={code} />
             </div>
         </div>
