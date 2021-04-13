@@ -10,5 +10,5 @@ var firebaseConfig = {
     appId: keys.appId,
 };
 
-const app = firebase.initializeApp(firebaseConfig);
+firebase.initializeApp(firebaseConfig);
 export const storage = firebase.storage();

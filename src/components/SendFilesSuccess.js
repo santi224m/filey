@@ -13,7 +13,7 @@ const SendFilesSuccess = ({ code }) => {
                 })
             );
         };
-    }, []);
+    }, [code]);
 
     return (
         <div id='send-file-sucess-page'>

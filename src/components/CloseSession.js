@@ -15,9 +15,12 @@ const CloseSession = ({ code }) => {
     };
 
     return (
-        <a className='btn btn-long close-session' onClick={handleSessionClose}>
+        <button
+            className='btn btn-long close-session'
+            onClick={handleSessionClose}
+        >
             Close Session
-        </a>
+        </button>
     );
 };
 
