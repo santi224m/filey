@@ -5,9 +5,10 @@ import App from './components/App';
 import './styles/global.css';
 import './styles/utilities.css';
 import './styles/components/navbar.css';
-import './styles/components/home.css'
-import './styles/components/sendFiles.css'
-import './styles/components/sendFilesSuccess.css'
-import './styles/components/recieveFiles.css'
+import './styles/components/home.css';
+import './styles/components/sendFiles.css';
+import './styles/components/sendFilesSuccess.css';
+import './styles/components/recieveFiles.css';
+import './styles/components/recieveFilesSuccess.css';
 
 ReactDOM.render(<App />, document.getElementById('root'));
