@@ -1,5 +1,3 @@
-import { useState } from 'react';
-import { storage } from '../firebase/config';
 import history from '../history';
 
 const RecieveFiles = ({ recieverCode, setRecieverCode }) => {

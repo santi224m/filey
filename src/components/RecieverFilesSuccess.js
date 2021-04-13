@@ -25,7 +25,7 @@ const RecieveFilesSuccess = ({ recieverCode }) => {
                 });
             })
         );
-    }, []);
+    }, [recieverCode]);
 
     const renderFilesList = () => {
         return fileNames.map(file => {
