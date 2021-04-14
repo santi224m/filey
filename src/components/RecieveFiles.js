@@ -1,4 +1,5 @@
 import history from '../history';
+import { Helmet } from 'react-helmet';
 
 const RecieveFiles = ({ recieverCode, setRecieverCode }) => {
     const handleSubmit = e => {
@@ -8,6 +9,9 @@ const RecieveFiles = ({ recieverCode, setRecieverCode }) => {
 
     return (
         <div id='recieve-files-page'>
+            <Helmet>
+                <title>Filey | Recieve Files</title>
+            </Helmet>
             <div className='container'>
                 <h1 className='heading'>Enter your code</h1>
                 <form onSubmit={handleSubmit}>

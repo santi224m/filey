@@ -8,6 +8,7 @@ import SendFilesSuccess from './SendFilesSuccess';
 import RecieveFiles from './RecieveFiles';
 import RecieveFilesSuccess from './RecieverFilesSuccess';
 import About from './About';
+import { Helmet } from 'react-helmet';
 
 const App = () => {
     const [senderCode, setSenderCode] = useState(null);
@@ -15,6 +16,13 @@ const App = () => {
 
     return (
         <Router history={history}>
+            <Helmet>
+                <title>Filey</title>
+                <meta
+                    name='description'
+                    content='Filey was made for those times that you have to transfer a file from one device to another. All you have to do is upload your files on one device and enter the code you are given on the second device.'
+                />
+            </Helmet>
             <Navbar />
             <Switch>
                 <Route path='/send-files'>

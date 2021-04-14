@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import generator from 'generate-password';
 import { storage } from '../firebase/config';
+import { Helmet } from 'react-helmet';
 
 const SendFiles = ({ setCode }) => {
     const [files, setFiles] = useState([]);
@@ -47,6 +48,9 @@ const SendFiles = ({ setCode }) => {
 
     return (
         <div id='send-files-page'>
+            <Helmet>
+                <title>Filey | Send Files</title>
+            </Helmet>
             <div className='container'>
                 <h1 className='heading'>Upload your files</h1>
                 <form>

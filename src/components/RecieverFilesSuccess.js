@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { storage } from '../firebase/config';
 import CloseSession from './CloseSession';
+import { Helmet } from 'react-helmet';
 
 const RecieveFilesSuccess = ({ recieverCode }) => {
     const [fileNames, setFileNames] = useState([]);
@@ -46,6 +47,9 @@ const RecieveFilesSuccess = ({ recieverCode }) => {
 
     return (
         <div id='reciever-file-success'>
+            <Helmet>
+                <title>Filey | Recieve Files</title>
+            </Helmet>
             <div className='container'>
                 <h2 className='heading'>Your files</h2>
                 {renderFilesList()}

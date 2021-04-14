@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import { storage } from '../firebase/config';
 import CloseSession from './CloseSession';
+import { Helmet } from 'react-helmet';
 
 const SendFilesSuccess = ({ code }) => {
     useEffect(() => {
@@ -17,6 +18,9 @@ const SendFilesSuccess = ({ code }) => {
 
     return (
         <div id='send-file-sucess-page'>
+            <Helmet>
+                <title>Filey | Send Files</title>
+            </Helmet>
             <div className='container'>
                 <h2 className='heading'>
                     Enter the following code on the other device
