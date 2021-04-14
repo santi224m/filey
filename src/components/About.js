@@ -56,7 +56,7 @@ const About = () => {
 
                     <h2 className='heading-strong'>Download Files</h2>
                     <p className='p-1'>
-                        Once you have uploaded your files and received you code,
+                        Once you have uploaded your files and received your code,
                         you can use that code on your other devices. Download
                         the files to your device and close the session when you
                         are done. Closing the session deletes the files so that
