@@ -1,6 +1,24 @@
+import { Helmet } from 'react-helmet';
+
 const About = () => {
     return (
         <div id='about-page'>
+            <Helmet>
+                <title>Filey | About</title>
+                <meta
+                    name='description'
+                    content="Filey was made for those times that you have to 
+                    transfer a file from one device to another. Usually to do 
+                    this, you have to sign in to a cloud storage service on 
+                    both devices. If you're using a mobile device, then you may 
+                    also have to install an app to do the transfer. Filey 
+                    solves this by allowing you to transfer files without 
+                    signing in. All you have to do is upload your files on one 
+                    device and enter the code you are given on the second 
+                    device. You could even download the files on more than one 
+                    device if you have to share your files with multiple people."
+                />
+            </Helmet>
             <div id='header-section'>
                 <h1 className='heading text-color-white text-center'>
                     Transfer between devices quickly
