@@ -2,13 +2,20 @@ import { useState, useEffect } from 'react';
 import { storage } from '../firebase/config';
 import CloseSession from './CloseSession';
 import { Helmet } from 'react-helmet';
+import { Link } from 'react-router-dom';
 
 const RecieveFilesSuccess = ({ recieverCode }) => {
     const [fileNames, setFileNames] = useState([]);
+    const [codeErr, setCodeErr] = useState(null);
 
     useEffect(() => {
         const storageRef = storage.ref().child('userFiles/' + recieverCode);
-        storageRef.listAll().then(dir =>
+        storageRef.listAll().then(dir => {
+            if (dir.items.length === 0) {
+                setCodeErr(
+                    'No files were found with your code. Please make sure that you entered it correctly'
+                );
+            }
             dir.items.forEach(item => {
                 const itemRef = storage.ref().child(item.fullPath);
                 itemRef.getDownloadURL().then(url => {
@@ -24,8 +31,8 @@ const RecieveFilesSuccess = ({ recieverCode }) => {
                     xhr.open('GET', url);
                     xhr.send();
                 });
-            })
-        );
+            });
+        });
     }, [recieverCode]);
 
     const renderFilesList = () => {
@@ -52,8 +59,17 @@ const RecieveFilesSuccess = ({ recieverCode }) => {
             </Helmet>
             <div className='container'>
                 <h2 className='heading'>Your files</h2>
+                {codeErr && <div className='error-message'>{codeErr}</div>}
                 {renderFilesList()}
-                <CloseSession code={recieverCode} />
+                {!codeErr && <CloseSession code={recieverCode} />}
+                {codeErr && (
+                    <Link
+                        to='/recieve-files'
+                        className='btn btn-long close-session'
+                    >
+                        Go back
+                    </Link>
+                )}
             </div>
         </div>
     );
