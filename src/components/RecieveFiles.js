@@ -1,9 +1,17 @@
+import { useState } from 'react';
 import history from '../history';
 import { Helmet } from 'react-helmet';
 
 const RecieveFiles = ({ recieverCode, setRecieverCode }) => {
+    const [codeErr, setCodeErr] = useState(null);
+
     const handleSubmit = e => {
         e.preventDefault();
+        if (recieverCode.length !== 6) {
+            setCodeErr('*Please enter your 6 digit code');
+            return;
+        }
+
         history.push('recieve-files-success');
     };
 
@@ -22,6 +30,7 @@ const RecieveFiles = ({ recieverCode, setRecieverCode }) => {
                         value={recieverCode}
                         onChange={e => setRecieverCode(e.target.value)}
                     />
+                    {codeErr && <div className='error-message'>{codeErr}</div>}
                     <button type='submit' className='btn btn-long'>
                         Continue
                     </button>

@@ -44,6 +44,10 @@
     margin: 0 auto;
 }
 
+#recieve-files-page .error-message {
+    margin-top: -40px;
+}
+
 @media only screen and (max-width: 768px) {
     #recieve-files-page form input#code-input {
         width: 100%;
