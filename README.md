@@ -15,7 +15,7 @@ npm install
 ```
 
 ## Connecting Firebase
-Create a new project at [firebase](https://firebase.google.com/) and add get your api keys.
+Create a new project at [firebase](https://firebase.google.com/) and get your api keys.
 
 Create a dev.js file in ```filey/src/config```
 
