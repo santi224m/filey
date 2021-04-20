@@ -94,9 +94,17 @@
     transform: rotate(45deg) translate(-9px, -8px);
 }
 
+#mobile-menu {
+    display: none;
+}
+
 @media only screen and (max-width: 768px) {
     #navbar .navbar-links {
         display: none;
+    }
+
+    #mobile-menu {
+        display: initial;
     }
 
     #navbar.position-fixed {
