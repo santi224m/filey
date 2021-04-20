@@ -30,8 +30,80 @@
     color: var(--secondary-color);
 }
 
+#mobile-navbar {
+    background: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+}
+
+#mobile-navbar .navbar-item {
+    text-decoration: none;
+}
+
+#mobile-navbar a:not(.btn) {
+    font-size: 25px;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin: 20px 0;
+}
+
+#mobile-navbar .btn {
+    margin: 0 auto;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+    width: 25px;
+    height: 2px;
+    background-color: var(--primary-color);
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+/* #navbar #mobile-menu .bar1 {
+    margin-top: 0;
+}
+#navbar #mobile-menu .bar3 {
+    margin-bottom: 0;
+} */
+
+/* Rotate first bar */
+.change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-3px, 2.5px);
+    transform: rotate(-45deg) translate(-3px, 2.5px);
+}
+
+/* Fade out the second bar */
+.change .bar2 {
+    opacity: 0;
+}
+
+/* Rotate last bar */
+.change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-9px, -8px);
+    transform: rotate(45deg) translate(-9px, -8px);
+}
+
 @media only screen and (max-width: 768px) {
     #navbar .navbar-links {
-        /* display: none; */
+        display: none;
+    }
+
+    #navbar.position-fixed {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 150;
     }
 }
